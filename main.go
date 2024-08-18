@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 
-	"example/api-advance-class/config"
 	"example/api-advance-class/controllers"
 
 	"github.com/gin-gonic/gin"
@@ -11,7 +10,7 @@ import (
 
 func main() {
 	fmt.Println("Welcome to Rest")
-	config.ConnectDatabase()
+	// config.ConnectDatabase()
 	r := gin.Default()
 	r.GET("product", controllers.All)
 	r.GET("product/:id", controllers.Index)
